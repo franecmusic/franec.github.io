@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FRANEC — Music Portfolio</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #111 0%, #222 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .menu a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 960px;
+            margin-top: 3rem;
+            padding: 1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .bio {
+            max-width: 960px;
+            padding: 2rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #eee;
+            text-align: center;
+        }
+
+        .contact {
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FRANEC</div>
+        <nav class="menu">
+            <a href="#about">About</a>
+            <a href="mailto:franciszek.knapczyk@gmail.com">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/1069259920?background=0&title=0&byline=0&portrait=0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="bio" id="about">
+        <p>My name is Franciszek "franec" Knapczyk, a sound designer, composer and music producer with over 10 years of experience in audio. I blend technical expertise with creativity to craft unique sonic landscapes.</p>
+        <p>As a multi-instrumentalist, I’ve composed and produced music across various genres, continually refining my skills. My passion for sound led me to study audio engineering and sound directing at the Academy of Music in Bydgoszcz and the Fryderyk Chopin University of Music in Warsaw.</p>
+        <div class="contact">📧 franciszek.knapczyk@gmail.com<br>📞 +48 736 763 328</div>
+    </section>
+</body>
+</html>
