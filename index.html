@@ -4,41 +4,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Franec Music Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>FRANEC – Sound & Music</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    nav a {
+      color: #bbb;
+      margin-left: 24px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeInContent 1.2s ease;
+    }
+
+    @keyframes fadeInContent {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .main-content h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .video-container {
+      width: 90%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      animation: fadeInVideo 1.6s ease;
+    }
+
+    @keyframes fadeInVideo {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 16px;
+      }
+
+      .main-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .main-content p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
-<body class="text-white font-sans">
-
-  <!-- Header -->
-  <header class="flex justify-between items-center p-6">
-    <h1 class="text-2xl font-bold tracking-widest">FRANEC</h1>
+<body>
+  <header>
+    <div class="logo">FRANEC</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="mailto:franciszek.knapczyk@gmail.com">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero Section with Vimeo and Title -->
-  <section class="flex flex-col items-center justify-center text-center px-6 py-16">
-    <div class="mb-6 w-full max-w-4xl relative">
-      <div class="absolute inset-0 flex items-center justify-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white drop-shadow-md">MUSIC SHOWREEL</h2>
-      </div>
-      <iframe src="https://player.vimeo.com/video/934308113?h=42c9fc676a&title=0&byline=0&portrait=0"
-              width="100%" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
-              class="rounded-lg shadow-lg w-full"></iframe>
+  <section class="main-content" id="home">
+    <h1>Sound Design & Music for Visuals</h1>
+    <p>Original sound and music crafted for commercials, films and visual media.</p>
+    <div class="video-container">
+      <iframe src="https://player.vimeo.com/video/933984375" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
   </section>
 
-  <!-- Audio Section -->
-  <section class="bg-white bg-opacity-10 p-6 rounded-2xl shadow-lg mt-12 max-w-3xl mx-auto mb-16">
-    <h2 class="text-2xl font-semibold mb-4 text-white">Volkswagen Transporter Radio Commercial</h2>
-    <audio controls class="w-full">
-      <source src="volkswagen_transporter_radio_commercial.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </section>
-
+  <footer>
+    © 2025 Franciszek "franec" Knapczyk. All rights reserved.
+  </footer>
 </body>
 </html>
